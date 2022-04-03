@@ -48,9 +48,8 @@ const Register = () => {
       console.log(response.data);
 
       // const role = response.data.role;
-      
-      setSuccess(true);
 
+      setSuccess(true);
 
       localStorage.setItem("username", JSON.stringify(username));
       localStorage.setItem("password", JSON.stringify(password)); // inte alls en säkerhetsrisk
@@ -73,9 +72,15 @@ const Register = () => {
           <div className={classes.toolbar} />
 
           <h1>Registration was SUCCESSFUL!</h1>
-          <p>
-            <a href="/login">SIGN IN</a>
-          </p>
+          <button
+            onClick={() => {
+              localStorage.clear();
+              navigate("/login");
+              window.location.reload();
+            }}
+          >
+            Go to login
+          </button>
         </section>
       ) : (
         <div className={classes.root}>
@@ -83,11 +88,6 @@ const Register = () => {
           <Grid item xs={12} className={classes.reg}>
             <Typography variant="h6">Register</Typography>
             <form className={classes.formContainer} onSubmit={handleSubmit}>
-              {/* <input
-                type="text"
-                placeholder="Email..."
-                className={classes.input}
-              /> */}
               <input
                 type="text"
                 placeholder="Username..."
@@ -106,12 +106,12 @@ const Register = () => {
               <button className={classes.input}>Register</button>
             </form>
             <button
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Already got an account? Login
-              </button>
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              Already got an account? Login
+            </button>
           </Grid>
         </div>
       )}
