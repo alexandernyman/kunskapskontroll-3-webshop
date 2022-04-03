@@ -5,9 +5,12 @@ import axios from "axios";
 import { useRecoilState } from "recoil";
 import { PasswordState, SuccessState, UsernameState } from "../../atoms";
 import useAuth from "../Hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const Loginreg = () => {
   const classes = useStyles();
+
+  const navigate = useNavigate();
 
   const [username, setUsername] = useRecoilState(UsernameState);
   const [password, setPassword] = useRecoilState(PasswordState);
@@ -139,7 +142,13 @@ const Loginreg = () => {
                 />
                 <button className={classes.input}>Login</button>
               </form>
-              <a href="/register">NOT REGISTERED YET?</a>
+              <button
+                onClick={() => {
+                  navigate("/register");
+                }}
+              >
+                Not signed up yet? Register
+              </button>
             </Grid>
           </Grid>
         </div>

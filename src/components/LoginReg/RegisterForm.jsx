@@ -4,9 +4,12 @@ import { Grid, Typography } from "@material-ui/core";
 import { useRecoilState } from "recoil";
 import { RegisterPassword, RegisterUser, SuccessState } from "../../atoms";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const classes = useStyles();
+
+  const navigate = useNavigate();
 
   const [username, setUsername] = useRecoilState(RegisterUser);
   const [password, setPassword] = useRecoilState(RegisterPassword);
@@ -102,7 +105,13 @@ const Register = () => {
 
               <button className={classes.input}>Register</button>
             </form>
-            <a href="/login">ALREADY GOT AN ACCOUNT?</a>
+            <button
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Already got an account? Login
+              </button>
           </Grid>
         </div>
       )}
