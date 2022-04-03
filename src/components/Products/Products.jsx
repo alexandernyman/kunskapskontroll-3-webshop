@@ -9,7 +9,7 @@ import { Typography } from "@material-ui/core";
 function Products() {
   const classes = useStyles();
 
-  const url = `https://fakestoreapi.com/products/?limit=12`;
+  const url = `https://k4backend.osuka.dev/products?limit=12`;
   let products = useAxiosGet(url);
 
   let content = null;

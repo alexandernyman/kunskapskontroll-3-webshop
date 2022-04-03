@@ -10,7 +10,7 @@ import { CartState } from "../../atoms";
 function Product() {
   const classes = useStyles();
   const { id } = useParams();
-  const url = `https://fakestoreapi.com/products/${id}`;
+  const url = `https://k4backend.osuka.dev/products/${id}`;
 
   let product = useAxiosGet(url);
 

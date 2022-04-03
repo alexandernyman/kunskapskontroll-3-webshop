@@ -23,14 +23,23 @@ const Navbar = () => {
     let path3 = `/`;
     navigate(path3);
   };
+  const routeChange4 = () => {
+    let path4 = `/login`;
+    navigate(path4);
+  };
+  const routeChange5 = () => {
+    let path5 = `/admin`;
+    navigate(path5);
+  };
   const classes = useStyles();
+
   return (
     <div>
       <AppBar psoition="fixed" className={classes.AppBar} color="inherit">
         <Toolbar>
           <Typography variant="h6" className={classes.title} color="inherit">
             <img src={logo} alt="K3" height="25px" className={classes.image} />
-            K3 BY ALEXANDER NYMAN
+            K3 / K4 BY ALEXANDER NYMAN
           </Typography>
           <MenuItem divider={true}>
             <Typography variant="h6">
@@ -65,17 +74,32 @@ const Navbar = () => {
               </Link>
             </Typography>
           </MenuItem>
-
           <div className={classes.grow} />
-          <div className={classes.button}>
-            {/* <IconButton aria-label="Show items" color="inherit" >
-            <Link href="/cart" color="inherit">
-              <Badge color="secondary">
-                <ShoppingCart />
-              </Badge>
+
+          <MenuItem divider={true}>
+            <Typography variant="h6">
+              <Link
+                onClick={routeChange4}
+                className={classes.link}
+                color="inherit"
+              >
+                Login
               </Link>
-            </IconButton> */}
-          </div>
+            </Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography variant="h6">
+              <Link
+                onClick={routeChange5}
+                className={classes.link}
+                color="inherit"
+              >
+                Admin
+              </Link>
+            </Typography>
+          </MenuItem>
+
+          <div className={classes.button}></div>
         </Toolbar>
       </AppBar>
     </div>
