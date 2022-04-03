@@ -75,11 +75,11 @@ const Register = () => {
           <button
             onClick={() => {
               localStorage.clear();
-              navigate("/login");
+              navigate("/");
               window.location.reload();
             }}
           >
-            Go to login
+            Let's get this party started
           </button>
         </section>
       ) : (
