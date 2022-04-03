@@ -106,7 +106,7 @@ const Loginreg = () => {
             Last Name: {localStorage.getItem("lastName")}
           </h4>
 
-          <a href="http://localhost:3000/login" className={classes.title}>
+          <a href="/" className={classes.title}>
             <button onClick={handleLogout}>Log Out</button>{" "}
             {/* Clear the local storage on logout so a new user can be prompted */}
           </a>
