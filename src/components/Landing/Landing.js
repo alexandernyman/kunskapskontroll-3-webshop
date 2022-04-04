@@ -14,7 +14,7 @@ const Landing = () => {
         />
         <CardContent>
           <div className={classes.cardContent}>
-            <Typography variant="h6">Welcome to K3</Typography>
+            <Typography variant="h6">Welcome to K3 / K4</Typography>
           </div>
         </CardContent>
       </Card>

@@ -8,7 +8,6 @@ import { useAxiosGet } from "../Hooks/Requests";
 import ProductCard from "../ProductCard/ProductCard";
 import useStyles from "./styles";
 
-
 const AdminUserCarts = () => {
   const classes = useStyles();
 
@@ -22,9 +21,9 @@ const AdminUserCarts = () => {
   if (products.data) {
     content = products.data.map((product) => (
       <Grid item xs={6}>
-      <div key={product.id}>
-        <ProductCard product={product}/>
-      </div>
+        <div key={product.id}>
+          <ProductCard product={product} />
+        </div>
       </Grid>
     ));
   }

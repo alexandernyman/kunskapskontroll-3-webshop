@@ -5,7 +5,7 @@ const RequireAuth = () => {
     const {auth} = useAuth();
     const location = useLocation();
 
-    return(
+    return( // Helt ärligt så förstod jag inte riktigt dessa "? : ? :" men tolkat det lite som en if statement.
         auth.role === "admin" 
         ? <Outlet />
         : auth.username

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export function useAxiosGet(url) {
+export function useAxiosGet(url) { // Lyckades inte skapa en post metod av axios hooken så finns endast en get hehe :O
   const [request, setRequest] = useState({
     loading: false,
     data: null,

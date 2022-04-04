@@ -12,7 +12,6 @@ import Admin from "./components/Pages/Admin";
 import RequireAuth from "./components/RequireAuth";
 import Unauthorized from "./components/Pages/Unauthorized";
 
-
 function App() {
   return (
     <div>
@@ -20,14 +19,13 @@ function App() {
         <AuthProvider>
           <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/products" element={<ProductPage />} />
-                <Route path="/products/:id" element={<ProductInfo />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/register" element={<Register />} />
-                {/* <Route path="/account" element={<Account />} /> */}
-                <Route path="/unauthorized" element={<Unauthorized />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<ProductPage />} />
+              <Route path="/products/:id" element={<ProductInfo />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/unauthorized" element={<Unauthorized />} />
 
               {/* protected */}
               <Route element={<RequireAuth allowedRoles={["admin"]} />}>

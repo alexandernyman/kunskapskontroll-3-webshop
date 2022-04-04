@@ -50,10 +50,9 @@ const Loginreg = () => {
       );
       const role = userResponse.data.role;
 
+      // Info på account-sidan
       const email = userResponse.data.email;
-
       const global = userResponse.data.name;
-
       const nameSpread = { ...global };
 
       const firstName = nameSpread.firstname;
